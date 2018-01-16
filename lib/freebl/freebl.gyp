@@ -129,7 +129,7 @@
               ],
             }],
           ],
-        }, 'target_arch=="x64"', {
+        }], ['target_arch=="x64"', {
           'dependencies': [
             'intel-gcm-wrap_c_lib',
           ],

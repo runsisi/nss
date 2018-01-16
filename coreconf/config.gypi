@@ -201,9 +201,9 @@
       # the relative paths in the thin archive will break linking.
       [ '_type=="shared_library"', {
         'product_dir': '<(nss_dist_obj_dir)/lib'
-      }, '_type=="executable"', {
+      }], ['_type=="executable"', {
         'product_dir': '<(nss_dist_obj_dir)/bin'
-      }, '_standalone_static_library==1', {
+      }], ['_standalone_static_library==1', {
         'product_dir': '<(nss_dist_obj_dir)/lib'
       }],
       # mapfile handling
@@ -247,7 +247,7 @@
             }],
           }]
         ],
-      }, 'test_build==1 and _type=="shared_library"', {
+      }], ['test_build==1 and _type=="shared_library"', {
         # When linking a shared lib against a static one, XCode doesn't
         # export the latter's symbols by default. -all_load fixes that.
         'xcode_settings': {
